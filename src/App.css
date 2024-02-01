@@ -1,0 +1,84 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  background-color: #999;
+  background-image: url() no-repeat 0 0;
+  --icon-width: 15px;
+  --icon-active-bg: blue;
+}
+
+.App {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  color: #fff;
+}
+
+.new-todo {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.new-todo .ipt {
+  border: 0 none;
+  outline: none;
+}
+
+.icon {
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: .2s;
+  width: var(--icon-width);
+  height: var(--icon-width);
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.active .icon {
+  background-color: transparent;
+  border-color: #000;
+}
+.completed .icon {
+  background-color: var(--icon-active-bg);
+  border-color: var(--icon-active-bg);
+}
+.completed .text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-list {
+  margin: 20px 0;
+  box-shadow: 0 0 10px #333;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.todo-list .todo {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link-btn {
+  cursor: pointer;
+  transition: .2s;
+}
+.link-btn:hover {
+  color: blue;
+}
